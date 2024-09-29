@@ -1,7 +1,7 @@
 package io.github.apickledwalrus.skriptplaceholders.placeholder;
 
 import ch.njol.skript.Skript;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;

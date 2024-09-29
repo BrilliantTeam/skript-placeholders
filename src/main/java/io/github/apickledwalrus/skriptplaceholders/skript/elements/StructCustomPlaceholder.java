@@ -122,8 +122,8 @@ public class StructCustomPlaceholder extends Structure implements PlaceholderEva
 		if (Bukkit.isPrimaryThread()) {
 			registry.registerPlaceholder(plugin, placeholder, this);
 		} else {
-			Bukkit.getScheduler().runTask(SkriptPlaceholders.getInstance(),
-					() -> registry.registerPlaceholder(plugin, placeholder, this)
+			Bukkit.getGlobalRegionScheduler().run(SkriptPlaceholders.getInstance(),
+					(ignored) -> registry.registerPlaceholder(plugin, placeholder, this)
 			);
 		}
 
@@ -136,8 +136,8 @@ public class StructCustomPlaceholder extends Structure implements PlaceholderEva
 		if (Bukkit.isPrimaryThread()) {
 			registry.unregisterPlaceholder(plugin, placeholder, this);
 		} else {
-			Bukkit.getScheduler().runTask(SkriptPlaceholders.getInstance(),
-					() -> registry.unregisterPlaceholder(plugin, placeholder, this)
+			Bukkit.getGlobalRegionScheduler().run(SkriptPlaceholders.getInstance(),
+					(ignored) -> registry.unregisterPlaceholder(plugin, placeholder, this)
 			);
 		}
 	}
